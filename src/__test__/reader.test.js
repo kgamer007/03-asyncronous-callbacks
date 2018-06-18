@@ -7,8 +7,6 @@ const mockText1 = `${__dirname}/./mock-assets/1.txt`;
 const mockText2 = `${__dirname}/./mock-assets/2.txt`;
 const mockText3 = `${__dirname}/./mock-assets/3.txt`;
 
-// this array will be filled with data of each mock file above after it is read.  
-// This is used for comparison to the data we return from our tests
 let mockData = [];
 
 describe('testing fileReader module that reads there files', () => {
@@ -22,8 +20,8 @@ describe('testing fileReader module that reads there files', () => {
   });
 
   test('should show that the data we read from readThreeFiles equals the data in our mockData array', () => {
-    fileReader.readThreeFiles(mockText1, mockText2, mockText3, (err, data1, data2, data3) => {
-      expect(data1).toEqual(mockData[0]);
+    fileReader.readThreeFiles(mockText1, mockText2, mockText3, (err, data) => {
+      expect(data).toEqual(mockData[0]);
       expect(err).toBeNull();
       // put more expect statements
     });
