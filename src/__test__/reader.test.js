@@ -15,9 +15,9 @@ describe('testing fileReader module that reads there files', () => {
   beforeAll(() => {
     // please don't use "sync" version of node modules in real code except for testing purposes
     mockData = [
-      fs.readFileSync(mockText1, { encoding: 'utf-8' }),
-      fs.readFileSync(mockText2, { encoding: 'utf-8' }),
-      fs.readFileSync(mockText3, { encoding: 'utf-8' }),
+      fs.readFile(mockText1, { encoding: 'utf-8' }),
+      fs.readFile(mockText2, { encoding: 'utf-8' }),
+      fs.readFile(mockText3, { encoding: 'utf-8' }),
     ];
   });
 
